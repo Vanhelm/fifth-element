@@ -28,7 +28,9 @@
           </div>
         </div>
       </div>
-      <Button></Button>
+      <div class="btn-center">
+        <Button></Button>
+      </div>
     </div>
   </section>
 </template>
@@ -46,6 +48,9 @@ import Button from "./UI/Button";
 <style lang="scss" scoped>
   .results {
     display: flex;
+    @media(max-width: 840px) {
+      justify-content: center;
+    }
 
     .results__wrapper {
       display: flex;
@@ -72,17 +77,21 @@ import Button from "./UI/Button";
 
       .results__body {
         display: flex;
+        @media(max-width: 840px) {
+          flex-direction: column;
+        }
 
         .results__block {
           display: flex;
           flex-direction: column;
+          margin: 0 20px 20px 0px;
           @media(max-width: 1140px) {
             width: 100%;
           }
 
           .block {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             p {
               font-family: Raleway;
               font-style: normal;
@@ -107,6 +116,10 @@ import Button from "./UI/Button";
             }
           }
         }
+      }
+      .btn-center {
+        display: flex;
+        justify-content: center;
       }
     }
   }

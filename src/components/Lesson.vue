@@ -12,7 +12,7 @@
         <Button></Button>
       </div>
       <div class="wrapper__img">
-        <img src="@/assets/free-img.svg" alt="">
+        <img src="@/assets/free-img.png" alt="">
       </div>
     </div>
   </section>
@@ -32,6 +32,9 @@ export default {
 <style lang="scss" scoped>
   .free {
     display: flex;
+    @media(max-width: 1200px) {
+      justify-content: center;
+    }
 
     .wrapper {
       display: flex;
