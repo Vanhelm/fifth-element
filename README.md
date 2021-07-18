@@ -1,4 +1,4 @@
-# navigation-menu
+# Simple landing page on VueJS
 
 ## Project setup
 ```
