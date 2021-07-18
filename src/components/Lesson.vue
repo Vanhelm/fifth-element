@@ -32,8 +32,12 @@ export default {
 <style lang="scss" scoped>
   .free {
     display: flex;
+    padding: 12px 0;
+    max-width: 1140px;
+    margin: 0 auto;
     @media(max-width: 1200px) {
       justify-content: center;
+      padding: 12px 0;
     }
 
     .wrapper {
@@ -41,10 +45,10 @@ export default {
       flex-direction: row;
       position: relative;
       margin: 56px auto;
-      padding: 12px 0;
       transition: .5s ease all;
       @media(max-width: 1140px) {
         margin: 8px;
+        padding: 12px 0;
         flex-direction: column-reverse;
       }
 
@@ -92,6 +96,8 @@ export default {
           margin-top: 40px;
           @media(max-width: 1140px) {
             width: 100%;
+            margin-top: 10px;
+            margin-bottom: 40px;
           }
         }
       }

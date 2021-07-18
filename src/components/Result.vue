@@ -48,6 +48,9 @@ import Button from "./UI/Button";
 <style lang="scss" scoped>
   .results {
     display: flex;
+    padding: 12px 0;
+    max-width: 1140px;
+    margin: 0 auto;
     @media(max-width: 840px) {
       justify-content: center;
     }
@@ -56,9 +59,9 @@ import Button from "./UI/Button";
       display: flex;
       position: relative;
       margin: 56px auto;
-      padding: 12px 0;
       transition: .5s ease all;
       flex-direction: column;
+      width: 100%;
       @media(max-width: 1140px) {
         padding: 12px 0;
         margin: 8px;
@@ -73,6 +76,11 @@ import Button from "./UI/Button";
         line-height: 48px;
         color: #000000;
         margin-bottom: 64px;
+        @media(max-width: 1140px) {
+          font-size: 20px;
+          line-height: 22px;
+          margin-bottom: 20px;
+        }
       }
 
       .results__body {
@@ -100,6 +108,10 @@ import Button from "./UI/Button";
               line-height: 21px;
               color: #000000;
               margin-bottom: 20px;
+              @media(max-width: 1140px) {
+                font-size: 14px;
+                line-height: 16px;
+              }
             }
 
             .results__img {
@@ -120,6 +132,10 @@ import Button from "./UI/Button";
       .btn-center {
         display: flex;
         justify-content: center;
+        margin-top: 55px;
+        @media(max-width: 1140px) {
+          width: 100%;
+        }
       }
     }
   }

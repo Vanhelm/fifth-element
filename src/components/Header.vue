@@ -39,6 +39,12 @@ export default {
 <style lang="scss" scoped>
 .free {
   display: flex;
+  padding: 12px 0;
+  max-width: 1140px;
+  margin: 0 auto;
+  @media(max-width: 840px) {
+    justify-content: center;
+  }
 
   .wrapper {
     display: flex;
