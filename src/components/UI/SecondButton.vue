@@ -11,24 +11,23 @@
         <i class="material-icons" v-on:click.stop.prevent="showModal = false">close</i>
       </span>
       <h1>Войди уверенно в мир <br>
-          крупного заработка!
+        крупного заработка!
       </h1>
       <p>
-        Заполни поля и мы свяжемся с тобой, <br>
-        ответим на интересующие вопросы, <br>
-        оставим комерческое предложение.
+        Заполни поля, и проверь почту. <br>
+        3 бесплатных пробных урока будут ждать тебя там!
       </p>
-      <form id="ltForm1316064"  action="https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br>
-        <input type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value=""><br>
-        <input type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
-        <input type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" ><br>
-        <button type="submit" id="button1914629" class="simple-btn" onclick="if(window['btnprs60a5108755951']){return false;}window['btnprs60a5108755951']=true;setTimeout(function(){window['btnprs60a5108755951']=false},6000);return true;">
+      <form id="ltForm6064264"  action="https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br>
+        <input type="text" maxlength="60"  placeholder="Введите ваш эл. адрес" name="formParams[email]" value="" ><br>
+        <input type="text" maxlength="60"  placeholder="Введите ваше имя" name="formParams[full_name]" value=""><br>
+        <input type="text" maxlength="60"  placeholder="Введите ваш телефон" name="formParams[phone]" value=""><br>
+        <button type="submit" id="button6263071" class="simple-btn" onclick="if(window['btnprs60f17309f25cf']){return false;}window['btnprs60f17309f25cf']=true;setTimeout(function(){window['btnprs60f17309f25cf']=false},6000);return true;">
           Оставить заявку
         </button><br>
-        <input type="hidden" id="40280460a5108748ecf" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value="">
-        <input type="hidden" id="40280460a5108748ecfref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value="">
-        <input type="hidden" name="requestTime" value="1621430407">
-        <input type="hidden" name="requestSimpleSign" value="b694e8e66091b669c1402b14d1ca5236">
+        <input type="hidden" id="44123060f17309d4230" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value="">
+        <input type="hidden" id="44123060f17309d4230ref" name="__gc__internal__form__helper_ref" class="__gc__internal__form__helper_ref" value="">
+        <input type="hidden" name="requestTime" value="1626436361">
+        <input type="hidden" name="requestSimpleSign" value="a8e4093daaf6bc4e42829daddbcb5f4b">
         <input type="hidden" name="isHtmlWidget" value="1"/>
       </form>
       <span id="gccounterImgContainer"></span>
@@ -37,28 +36,28 @@
 </template>
 
 <script>
- export default {
-   name: 'button',
-   data() {
-     return {
-        showModal: false
-     }
-   },
-   methods: {
+export default {
+  name: 'SecondButton.vue',
+  data() {
+    return {
+      showModal: false
+    }
+  },
+  methods: {
 
-   }
- }
- // window.addEventListener('load', function(){
- //   let loc = document.getElementById("40280460a5108748ecf");
- //   loc.value = window.location.href;
- //   let ref = document.getElementById("40280460a5108748ecfref");
- //   ref.value = document.referrer;
- //
- //   let statUrl = "https://lab.tb7.kz/stat/counter?ref=" + encodeURIComponent(document.referrer)
- //       + "&loc=" + encodeURIComponent(document.location.href);
- //   document.getElementById('gccounterImgContainer').innerHTML
- //       = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
- // });
+  }
+}
+// window.addEventListener('load', function(){
+//   let loc = document.getElementById("40280460a5108748ecf");
+//   loc.value = window.location.href;
+//   let ref = document.getElementById("40280460a5108748ecfref");
+//   ref.value = document.referrer;
+//
+//   let statUrl = "https://lab.tb7.kz/stat/counter?ref=" + encodeURIComponent(document.referrer)
+//       + "&loc=" + encodeURIComponent(document.location.href);
+//   document.getElementById('gccounterImgContainer').innerHTML
+//       = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
+// });
 </script>
 
 <style lang="scss" scoped>
@@ -229,24 +228,23 @@
 }
 
 
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
 
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity .5s;
-  }
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
 
-  .fade-enter,
-  .fade-leave-to {
-    opacity: 0;
-  }
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform .5s;
+}
 
-  .slide-enter-active,
-  .slide-leave-active {
-    transition: transform .5s;
-  }
-
-  .slide-enter,
-  .slide-leave-to {
-    transform: translateY(-50%) translateX(100vw);
-  }
+.slide-enter,
+.slide-leave-to {
+  transform: translateY(-50%) translateX(100vw);
+}
 </style>

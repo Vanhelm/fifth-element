@@ -8,7 +8,7 @@
             <div><p>«Стала зарабатывать и все <br>
               в меня поверили»</p></div>
             <div class="results__img">
-              <a href="https://www.youtube.com/watch?v=6npnSzK90Eg&ab_channel=%D0%A2%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%D0%91%D0%B8%D1%80%D0%B6%D0%B0">
+              <a href="https://www.youtube.com/watch?v=6npnSzK90Eg&ab_channel=%D0%A2%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%D0%91%D0%B8%D1%80%D0%B6%D0%B0" target="_blank">
                 <img src="@/assets/female.svg" alt="">
               </a>
             </div>
@@ -21,7 +21,7 @@
               болғандықтан, қызыма ойыншық алдым!»
             </p></div>
             <div class="results__img">
-              <a href="https://www.youtube.com/watch?v=9IEK5RuZymI&ab_channel=%D0%A2%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%D0%91%D0%B8%D1%80%D0%B6%D0%B0">
+              <a href="https://www.youtube.com/watch?v=9IEK5RuZymI&ab_channel=%D0%A2%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%D0%91%D0%B8%D1%80%D0%B6%D0%B0" target="_blank">
                 <img src="@/assets/male.svg" alt="">
               </a>
             </div>
@@ -29,7 +29,7 @@
         </div>
       </div>
       <div class="btn-center">
-        <Button></Button>
+          <Button/>
       </div>
     </div>
   </section>
@@ -63,7 +63,7 @@ import Button from "./UI/Button";
       flex-direction: column;
       width: 100%;
       @media(max-width: 1140px) {
-        padding: 12px 0;
+        padding: 22px;
         margin: 8px;
         flex-direction: column;
       }
@@ -130,8 +130,8 @@ import Button from "./UI/Button";
         }
       }
       .btn-center {
-        display: flex;
-        justify-content: center;
+        display: inline-block;
+        margin: 0 auto;
         margin-top: 55px;
         @media(max-width: 1140px) {
           width: 100%;

@@ -1,6 +1,6 @@
 <template>
   <div className="btn">
-    <a className="simple-btn" href="https://www.instagram.com/chingis.kurmangaliyev/?utm_medium=copy_link">
+    <a className="simple-btn" href="https://www.instagram.com/chingis.kurmangaliyev/?utm_medium=copy_link" target="_blank">
       <img src="@/assets/insta.svg" alt="">
       <span>Посмотреть инстаграм</span>
     </a>
@@ -10,9 +10,6 @@
 <script>
 export default {
   name: 'Youtube',
-  data() {
-    return {}
-  }
 }
 
 </script>
@@ -56,7 +53,7 @@ export default {
   .simple-btn:hover {
     background-color: #1265F5;
     border-color: #FFED69;
-    color: #FF5E48;
+    color: #ffffff;
     cursor: pointer;
   }
 }

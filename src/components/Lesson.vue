@@ -3,13 +3,15 @@
     <div class="wrapper">
       <div class="wrapper__text">
         <h1>
-          Вступи уверенно в мир <br> тендеров за 7 бесплатных <br> уроков!
+          Оставь заявку и получи <br>
+          3 бесплатных пробных <br>
+          урока из курса <br>
+          «Пятый элемент» <br>
         </h1>
         <p>
-          Оставляйте заявку и получите бесплатные материалы, которые <br>
-          помогут начать работу в сфере крупных заработков
+          Твой быстрый старт в сфере крупных заработков
         </p>
-        <Button></Button>
+        <SecondButton/>
       </div>
       <div class="wrapper__img">
         <img src="@/assets/free-img.png" alt="">
@@ -19,12 +21,12 @@
 </template>
 
 <script>
-import Button from '@/components/UI/Button';
+import SecondButton from "./UI/SecondButton";
 
 export default {
   name: "Lesson",
   components: {
-    Button,
+    SecondButton,
   },
 };
 </script>
@@ -48,7 +50,7 @@ export default {
       transition: .5s ease all;
       @media(max-width: 1140px) {
         margin: 8px;
-        padding: 12px 0;
+        padding: 15px;
         flex-direction: column-reverse;
       }
 

@@ -60,6 +60,7 @@ import Instagram from "./UI/Instagram";
             font-weight: bold;
             font-size: 20px;
             line-height: 23px;
+            margin-left: 9px;
           }
         }
         .social {
@@ -74,8 +75,7 @@ import Instagram from "./UI/Instagram";
           }
           .block__instagram {
             display: flex;
-            width: 289px;
-            height: 56px;
+            //width: 289px;
             width: 100%;
             @media(max-width: 1140px) {
               max-width: 100%;
@@ -83,6 +83,7 @@ import Instagram from "./UI/Instagram";
           }
           .block__youtube {
             display: flex;
+            width: 100%;
             @media(max-width: 1140px) {
               max-width: 100%;
             }

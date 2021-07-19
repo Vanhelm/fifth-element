@@ -17,11 +17,11 @@
       </div>
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
-          <li><router-link class="link" :to="{name: 'Home'}">Курс</router-link></li>
-          <li><router-link class="link" :to="{name: ''}">Теория и практика</router-link></li>
-          <li><router-link class="link" :to="{name: ''}">Новичкам</router-link></li>
-          <li><router-link class="link" :to="{name: ''}">Результат</router-link></li>
-          <li><router-link class="link" :to="{name: ''}">О нас</router-link></li>
+          <li><a href="#course" class="link active" :to="{name: 'Home'}">Курс</a></li>
+          <li><a href="#card" class="link" :to="{name: ''}">Теория и практика</a></li>
+          <li><a href="#lesson" class="link" :to="{name: ''}">Новичкам</a></li>
+          <li><a href="#result" class="link" :to="{name: ''}">Результат</a></li>
+          <li><a href="#more" class="link" :to="{name: ''}">О нас</a></li>
         </ul>
       </transition>
     </nav>
@@ -44,6 +44,8 @@ export default {
     this.checkScreen();
   },
   methods: {
+
+
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
     },

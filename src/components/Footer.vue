@@ -14,7 +14,7 @@
             Оставляй заявку и получи бесплатные материалы, которые <br>
             помогут начать работу в сфере крупных заработков
           </p>
-          <Button/>
+          <SecondButton/>
         </div>
       </div>
     </div>
@@ -22,11 +22,11 @@
 </template>
 
 <script>
-import Button from "./UI/Button";
+import SecondButton from "./UI/SecondButton";
   export default {
     name: 'Footer',
     components: {
-      Button,
+      SecondButton,
     }
   }
 </script>
@@ -44,6 +44,7 @@ import Button from "./UI/Button";
       display: flex;
       @media(max-width: 1140px) {
         flex-direction: column;
+        margin: 22px;
       }
       .footer__block {
         display: flex;
@@ -67,6 +68,7 @@ import Button from "./UI/Button";
             line-height: 47px;
             @media(max-width: 1140px) {
               margin-top: 15px;
+              margin-left: 9px;
               font-weight: bold;
               font-size: 20px;
               line-height: 23px;
@@ -81,6 +83,9 @@ import Button from "./UI/Button";
             line-height: 21px;
             margin-top: 29px;
             margin-bottom: 49px;
+            @media(max-width: 1140px) {
+              margin-left: 9px;
+            }
           }
         }
       }

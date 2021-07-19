@@ -14,12 +14,13 @@
           </p>
         </div>
         <div class="wrapper__btn">
-          <Button></Button>
+          <Button/>
         </div>
       </div>
       <div class="wrapper__img">
         <img src="@/assets/section-img.svg" alt="5 элемент">
-        <span>Тендер</span>
+        <span class="typed-text">{{ typeValue }}</span>
+        <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
       </div>
     </div>
   </section>
@@ -28,11 +29,58 @@
 <script>
 import Button from '@/components/UI/Button';
 
+
 export default {
   name: "Header",
   components: {
     Button,
   },
+  data() {
+    return {
+      typeValue: '',
+      typeStatus: false,
+      typeArray: ['УСПЕХ', 'ДЕНЬГИ', 'ТЕНДЕРЫ','ГОСЗАКУПКИ'],
+      typingSpeed: 200,
+      erasingSpeed: 100,
+      newTextDelay: 2000,
+      typeArrayIndex: 0,
+      charIndex: 0
+    }
+  },
+  methods: {
+    typeText() {
+      if(this.charIndex < this.typeArray[this.typeArrayIndex].length) {
+        if(!this.typeStatus)
+          this.typeStatus = true;
+        this.typeValue += this.typeArray[this.typeArrayIndex].charAt(this.charIndex);
+        this.charIndex += 1;
+        setTimeout(this.typeText, this.typingSpeed);
+      }
+      else {
+        this.typeStatus = false;
+        setTimeout(this.eraseText, this.newTextDelay);
+      }
+    },
+    eraseText() {
+      if(this.charIndex > 0) {
+        if(!this.typeStatus)
+          this.typeStatus = true;
+        this.typeValue = this.typeArray[this.typeArrayIndex].substring(0, this.charIndex - 1);
+        this.charIndex -= 1;
+        setTimeout(this.eraseText, this.erasingSpeed);
+      }
+      else {
+        this.typeStatus = false;
+        this.typeArrayIndex += 1;
+        if(this.typeArrayIndex >= this.typeArray.length)
+          this.typeArrayIndex = 0;
+        setTimeout(this.typeText, this.typingSpeed + 1000);
+      }
+    }
+  },
+  created() {
+    setTimeout(this.typeText, this.newTextDelay + 200);
+  }
 };
 </script>
 
@@ -44,6 +92,7 @@ export default {
   margin: 0 auto;
   @media(max-width: 840px) {
     justify-content: center;
+    margin: 22px;
   }
 
   .wrapper {
@@ -55,7 +104,7 @@ export default {
     transition: .5s ease all;
     @media(max-width: 1140px) {
       padding: 12px 0;
-      margin: 8px;
+      margin: 0 8px;
       flex-direction: column-reverse;
     }
 
@@ -115,6 +164,7 @@ export default {
         position: relative;
         @media(max-width: 1140px) {
           width: 100%;
+          margin: 8px;
         }
       }
     }
@@ -138,17 +188,17 @@ export default {
         font-family: Raleway;
         font-style: normal;
         font-weight: bold;
-        font-size: 30px;
+        font-size: 27px;
         line-height: 35px;
         text-align: center;
         text-transform: uppercase;
-        color: #FF5E48;
+        color: rgb(255, 255, 255);
         margin-top: 60px;
         @media(max-width: 1140px) {
           font-family: Raleway;
-          font-size: 13px;
+          font-size: 15px;
           line-height: 15px;
-          color: #FF5E48;
+          margin-top: 35px;
         }
       }
     }
