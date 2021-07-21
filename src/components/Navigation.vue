@@ -5,11 +5,11 @@
         <img class="desktop" src="@/assets/logo.svg" alt="">
         <img class="mobile" src="@/assets/mobile-logo.svg" alt="">
       </div>
-      <ul v-show="!mobile" class="navigation">
+      <ul v-show="!mobile"  class="navigation">
         <li><a href="#course" class="link active" :to="{name: 'Home'}">Курс</a></li>
         <li><a href="#card" class="link" :to="{name: ''}">Теория и практика</a></li>
         <li><a href="#lesson" class="link" :to="{name: ''}">Новичкам</a></li>
-        <li><a href="#result" class="link" :to="{name: ''}">Результат</a></li>
+        <li><a @click="toggleActiveClass" href="#result" class="link" :to="{name: ''}">Результат</a></li>
         <li><a href="#more" class="link" :to="{name: ''}">О нас</a></li>
       </ul>
       <div class="icon">
@@ -44,8 +44,6 @@ export default {
     this.checkScreen();
   },
   methods: {
-
-
     toggleMobileNav() {
       this.mobileNav = !this.mobileNav;
     },
@@ -59,7 +57,18 @@ export default {
       this.mobile = false;
       this.mobileNav = false;
       return
-    }
+    },
+
+    // toggleActiveClass() {
+    //   const listItem = document.querySelectorAll('.link');
+    //
+    //   listItem.forEach(item => {
+    //     item.classList.remove('.active')
+    //     item.addEventListener('click', () => {
+    //       this.item.classList.add('.active');
+    //     })
+    //   })
+    // },
   },
 };
 </script>
@@ -129,6 +138,11 @@ export default {
           border-color: #262626;
         }
       }
+
+      //.active {
+      //  color: #262626;
+      //  border-color: #262626;
+      //}
 
         .branding {
           display: flex;

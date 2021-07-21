@@ -222,7 +222,7 @@ export default {
     .simple-btn:hover {
       background-color: #1265F5;
       border-color: #FFED69;
-      color: #FF5E48;
+      color: #ffffff;
     }
   }
 }

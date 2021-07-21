@@ -9,7 +9,7 @@
               в меня поверили»</p></div>
             <div class="results__img">
               <a href="https://www.youtube.com/watch?v=6npnSzK90Eg&ab_channel=%D0%A2%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%D0%91%D0%B8%D1%80%D0%B6%D0%B0" target="_blank">
-                <img src="@/assets/female.svg" alt="">
+                <img src="@/assets/сандугаш.png" alt="">
               </a>
             </div>
           </div>
@@ -116,7 +116,8 @@ import Button from "./UI/Button";
 
             .results__img {
               display: flex;
-              width: 100%;
+              width: 585px;
+              max-width: 100%;
               a {
                 display: flex;
                 img {
