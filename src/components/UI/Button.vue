@@ -104,12 +104,6 @@
   font-size: 18px;
   font-weight: 700;
 
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
-  transition: 0.4s ease-out;
-
-  &:hover {
-    box-shadow: 6px 6px rgba(0, 0, 0, 0.6);
-  }
 }
 
 .modal-overlay {

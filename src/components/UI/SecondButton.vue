@@ -18,9 +18,9 @@
         3 бесплатных пробных урока будут ждать тебя там!
       </p>
       <form id="ltForm6064264"  action="https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br>
-        <input type="text" maxlength="60"  placeholder="Введите ваш эл. адрес" name="formParams[email]" value="" ><br>
-        <input type="text" maxlength="60"  placeholder="Введите ваше имя" name="formParams[full_name]" value=""><br>
-        <input type="text" maxlength="60"  placeholder="Введите ваш телефон" name="formParams[phone]" value=""><br>
+        <input type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value=""><br>
+        <input type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
+        <input type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" ><br>
         <button type="submit" id="button6263071" class="simple-btn" onclick="if(window['btnprs60f17309f25cf']){return false;}window['btnprs60f17309f25cf']=true;setTimeout(function(){window['btnprs60f17309f25cf']=false},6000);return true;">
           Оставить заявку
         </button><br>
@@ -102,13 +102,6 @@ export default {
   color: #FFF;
   font-size: 18px;
   font-weight: 700;
-
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
-  transition: 0.4s ease-out;
-
-  &:hover {
-    box-shadow: 6px 6px rgba(0, 0, 0, 0.6);
-  }
 }
 
 .modal-overlay {
