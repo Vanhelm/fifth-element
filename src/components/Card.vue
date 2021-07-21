@@ -141,7 +141,7 @@ export default {
 
         .card-header {
           display: flex;
-          padding: 27px;
+          padding: 27px 27px 0 27px;
           background-color: #2D2D2D;
           color: #fff;
           justify-content: space-between;
@@ -183,7 +183,7 @@ export default {
         .card-body {
           background-color: #2D2D2D;
           color: #FFFFFF;
-          padding: 30px 20px;
+          padding: 0 20px;
           font-size: 18px;
           height: 100%;
           @media(max-width: 1140px) {

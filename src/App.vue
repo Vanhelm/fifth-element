@@ -11,6 +11,14 @@ export default {
   name: "App",
   components: {
     Navigation,
+  },
+  metaInfo: {
+    title: 'My Example App',
+    titleTemplate: '%s - Yay!',
+    htmlAttrs: {
+      lang: 'en',
+      amp: true
+    }
   }
 };
 </script>

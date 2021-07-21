@@ -120,6 +120,9 @@ export default {
         color: #000000;
         list-style: none;
         text-decoration: none;
+        @media(max-width: 1140px) {
+          color: #FFFFFF;
+        }
         }
 
       li {
@@ -139,10 +142,7 @@ export default {
         }
       }
 
-      //.active {
-      //  color: #262626;
-      //  border-color: #262626;
-      //}
+
 
         .branding {
           display: flex;
