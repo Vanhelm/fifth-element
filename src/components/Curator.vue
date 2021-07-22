@@ -92,6 +92,7 @@
           width: 100%;
           @media(max-width: 1140px) {
             width: 100%;
+            padding: 15px;
           }
           .block__img {
             border-radius: 10px;
@@ -100,6 +101,9 @@
             width: 330px;
             height: 460px;
             margin: 0 auto;
+            @media(max-width: 1140px) {
+              width: 100%;
+            }
             .icon__img {
               margin: 20px;
               width: 50%;
@@ -113,6 +117,9 @@
             background: url("../assets/nasty.png") no-repeat;
             background-position: 30% 50%;
             background-color: #262626;
+            @media(max-width: 1140px) {
+              background-size: 500px;
+            }
           }
           .nasty:hover {
             background-color: #FFED69;
@@ -122,6 +129,9 @@
             background: url("../assets/chingis.png") no-repeat;
             background-position: 55% 50%;
             background-color: #262626;
+            @media(max-width: 1140px) {
+              background-size: 500px;
+            }
           }
           .chingis:hover {
             background-color: #FFED69;
@@ -130,6 +140,9 @@
           .aika {
             background: url("../assets/aigerim.png") center no-repeat;
             background-color: #262626;
+            @media(max-width: 1140px) {
+              background-size: 300px;
+            }
           }
           .aika:hover {
             background-color: #FFED69;
@@ -144,7 +157,7 @@
             color: #000000;
             @media(max-width: 1140px) {
               width: 100%;
-
+              padding-left: 12px;
             }
 
             h1 {
