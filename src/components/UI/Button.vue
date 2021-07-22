@@ -18,7 +18,8 @@
         ответим на интересующие вопросы, <br>
         оставим комерческое предложение.
       </p>
-      <form id="ltForm1316064"  action="https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br>
+      <form id="SendCallback" @submit="SubmitForm" method="post" data-open-new-window="0">
+        <input type="hidden" name="formParams[setted_offer_id]" ><br>
         <input type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value=""><br>
         <input type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
         <input type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" ><br>
@@ -45,20 +46,26 @@
      }
    },
    methods: {
-
+     SubmitForm()
+     {
+       let urlList = ['https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971', 'https://formspree.io/f/xayadkeb'];
+       urlList.forEach(url => document.forms['SendCallback'].action = url);
+     }
+   },
+   mounted() {
+     // window.addEventListener('load', function(){
+     //   let loc = document.getElementById("40280460a5108748ecf");
+     //   loc.value = window.location.href;
+     //   let ref = document.getElementById("40280460a5108748ecfref");
+     //   ref.value = document.referrer;
+     //
+     //   let statUrl = "https://lab.tb7.kz/stat/counter?ref=" + encodeURIComponent(document.referrer)
+     //       + "&loc=" + encodeURIComponent(document.location.href);
+     //   document.getElementById('gccounterImgContainer').innerHTML
+     //       = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
+     // });
    }
  }
- // window.addEventListener('load', function(){
- //   let loc = document.getElementById("40280460a5108748ecf");
- //   loc.value = window.location.href;
- //   let ref = document.getElementById("40280460a5108748ecfref");
- //   ref.value = document.referrer;
- //
- //   let statUrl = "https://lab.tb7.kz/stat/counter?ref=" + encodeURIComponent(document.referrer)
- //       + "&loc=" + encodeURIComponent(document.location.href);
- //   document.getElementById('gccounterImgContainer').innerHTML
- //       = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
- // });
 </script>
 
 <style lang="scss" scoped>

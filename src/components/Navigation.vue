@@ -6,22 +6,22 @@
         <img class="mobile" src="@/assets/mobile-logo.svg" alt="">
       </div>
       <ul v-show="!mobile"  class="navigation">
-        <li><a href="#course" class="link active" :to="{name: 'Home'}">Курс</a></li>
-        <li><a href="#card" class="link" :to="{name: ''}">Теория и практика</a></li>
-        <li><a href="#lesson" class="link" :to="{name: ''}">Новичкам</a></li>
-        <li><a @click="toggleActiveClass" href="#result" class="link" :to="{name: ''}">Результат</a></li>
-        <li><a href="#more" class="link" :to="{name: ''}">О нас</a></li>
+        <li><a v-smooth-scroll href="#course" class="link active" :to="{name: 'Home'}">Курс</a></li>
+        <li><a v-smooth-scroll href="#card" class="link" :to="{name: ''}">Теория и практика</a></li>
+        <li><a v-smooth-scroll href="#lesson" class="link" :to="{name: ''}">Новичкам</a></li>
+        <li><a v-smooth-scroll @click="toggleActiveClass" href="#result" class="link" :to="{name: ''}">Результат</a></li>
+        <li><a v-smooth-scroll href="#more" class="link" :to="{name: ''}">О нас</a></li>
       </ul>
       <div class="icon">
         <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{'icon-active': mobileNav}"></i>
       </div>
       <transition name="mobile-nav">
         <ul v-show="mobileNav" class="dropdown-nav">
-          <li><a href="#course" class="link active" :to="{name: 'Home'}">Курс</a></li>
-          <li><a href="#card" class="link" :to="{name: ''}">Теория и практика</a></li>
-          <li><a href="#lesson" class="link" :to="{name: ''}">Новичкам</a></li>
-          <li><a href="#result" class="link" :to="{name: ''}">Результат</a></li>
-          <li><a href="#more" class="link" :to="{name: ''}">О нас</a></li>
+          <li><a v-smooth-scroll href="#course" class="link active" :to="{name: 'Home'}">Курс</a></li>
+          <li><a v-smooth-scroll href="#card" class="link" :to="{name: ''}">Теория и практика</a></li>
+          <li><a v-smooth-scroll href="#lesson" class="link" :to="{name: ''}">Новичкам</a></li>
+          <li><a v-smooth-scroll href="#result" class="link" :to="{name: ''}">Результат</a></li>
+          <li><a v-smooth-scroll href="#more" class="link" :to="{name: ''}">О нас</a></li>
         </ul>
       </transition>
     </nav>
@@ -59,16 +59,14 @@ export default {
       return
     },
 
-    // toggleActiveClass() {
-    //   const listItem = document.querySelectorAll('.link');
-    //
-    //   listItem.forEach(item => {
-    //     item.classList.remove('.active')
-    //     item.addEventListener('click', () => {
-    //       this.item.classList.add('.active');
-    //     })
-    //   })
-    // },
+    scrollToMyEl () {
+      const myEl = this.$refs.myEl || this.$el || document.getElementById('#footer')
+
+      this.$smoothScroll({
+        scrollTo: myEl, // scrollTo is also allowed to be number
+        hash: '#sampleHash' // required if updateHistory is true
+      })
+    }
   },
 };
 </script>
@@ -157,7 +155,7 @@ export default {
         display: flex;
         align-items: center;
         flex: 1;
-        justify-content: center;
+        justify-content: flex-end;
       }
 
       .icon {
@@ -165,7 +163,7 @@ export default {
         align-items: center;
         position: absolute;
         top: 0;
-        right: 24px;
+        right: 0;
         height: 100%;
 
         i {

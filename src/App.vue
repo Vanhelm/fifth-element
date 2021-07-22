@@ -31,7 +31,6 @@ export default {
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  scroll-behavior: smooth;
 }
 
 .app {
