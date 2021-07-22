@@ -17,7 +17,7 @@
         Заполни поля, и проверь почту. <br>
         3 бесплатных пробных урока будут ждать тебя там!
       </p>
-      <form id="ltForm6064264"  action="https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br>
+      <form id="SendCallback" @submit="SubmitForm" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br>
         <input type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value=""><br>
         <input type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
         <input type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" ><br>
@@ -44,7 +44,11 @@ export default {
     }
   },
   methods: {
-
+    SubmitForm()
+    {
+      let urlList = ['https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141', 'https://formspree.io/f/xayadkeb'];
+      urlList.forEach(url => document.forms['SendCallback'].action = url);
+    }
   }
 }
 // window.addEventListener('load', function(){
