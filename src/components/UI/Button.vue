@@ -18,7 +18,7 @@
         ответим на интересующие вопросы, <br>
         оставим комерческое предложение.
       </p>
-      <form id="ltForm1316064" @submit="SubmitForm" action="" method="post" data-open-new-window="0">
+      <form id="SendCallback" @submit="SubmitForm" method="post" data-open-new-window="0">
         <input type="hidden" name="formParams[setted_offer_id]" ><br>
         <input type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value=""><br>
         <input type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
@@ -48,11 +48,8 @@
    methods: {
      SubmitForm()
      {
-       let arrayUrl = ['https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971', 'https://formspree.io/f/xayadkeb'];
-       for (let url of arrayUrl) {
-            document.forms.action = url;
-            console.log('sub');
-       }
+       let urlList = ['https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971', 'https://formspree.io/f/xayadkeb'];
+       urlList.forEach(url => document.forms['SendCallback'].action = url);
      }
    },
    mounted() {
