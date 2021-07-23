@@ -183,7 +183,8 @@ export default {
         .card-body {
           background-color: #2D2D2D;
           color: #FFFFFF;
-          padding: 0 20px;
+          margin-top: 10px;
+          padding: 0px 20px;
           font-size: 18px;
           height: 100%;
           @media(max-width: 1140px) {
