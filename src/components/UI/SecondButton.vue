@@ -47,7 +47,7 @@ export default {
   methods: {
     SubmitForm()
     {
-      let urlList = ['https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141', 'https://formspree.io/f/xayadkeb'];
+      let urlList = ['https://formspree.io/f/xayadkeb', 'https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141'];
       urlList.forEach(url => document.forms['SendCallback'].action = url);
     }
   },

@@ -20,9 +20,9 @@
       </p>
       <form id="SendCallback" @submit="SubmitForm" method="post" data-open-new-window="0">
         <input type="hidden" name="formParams[setted_offer_id]" ><br>
-        <input type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value=""><br>
-        <input type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
-        <input type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" ><br>
+        <input id="name" type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value=""><br>
+        <input id="phone" type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
+        <input id="email" type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" ><br>
         <button type="submit" id="button1914629" class="simple-btn" onclick="if(window['btnprs60a5108755951']){return false;}window['btnprs60a5108755951']=true;setTimeout(function(){window['btnprs60a5108755951']=false},6000);return true;">
           Оставить заявку
         </button><br>
@@ -46,10 +46,11 @@
      }
    },
    methods: {
-     SubmitForm()
-     {
-       let urlList = ['https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971', 'https://formspree.io/f/xayadkeb'];
-       urlList.forEach(url => document.forms['SendCallback'].action = url);
+    SubmitForm() {
+      {
+        let urlList = ['https://formspree.io/f/xayadkeb', 'https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141'];
+        urlList.forEach(url => document.forms['SendCallback'].action = url);
+      }
      }
    },
    mounted() {

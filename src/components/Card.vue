@@ -196,6 +196,9 @@ export default {
           p {
             color: #FFFFFF;
             text-align: left;
+              @media(max-width: 1140px) {
+                margin: 13px 0;
+            }
           }
 
 
