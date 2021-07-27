@@ -18,7 +18,7 @@
         ответим на интересующие вопросы, <br>
         оставим комерческое предложение.
       </p>
-      <form id="SendCallback" @submit="SubmitForm" method="post" data-open-new-window="0">
+      <form id="SendCallback" @submit="SubmitForm" data-open-new-window="0">
         <input type="hidden" name="formParams[setted_offer_id]" ><br>
         <input id="name" type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value=""><br>
         <input id="phone" type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
@@ -38,6 +38,7 @@
 </template>
 
 <script>
+import axios from 'axios'
  export default {
    name: 'button',
    data() {
@@ -48,8 +49,15 @@
    methods: {
     SubmitForm() {
       {
-        let urlList = ['https://formspree.io/f/xayadkeb', 'https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141'];
-        urlList.forEach(url => document.forms['SendCallback'].action = url);
+        // let urlList = ['https://formspree.io/f/xayadkeb', 'https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141'];
+        // urlList.forEach(url => document.forms['SendCallback'].action = url);
+
+
+        let form = document.querySelector('form');
+
+        let data = new FormData(form);
+        axios.post('https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141', data);
+        axios.post('https://formspree.io/f/xayadkeb', data);
       }
      }
    },
