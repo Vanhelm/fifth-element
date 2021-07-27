@@ -37,6 +37,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   name: 'SecondButton.vue',
   data() {
@@ -47,8 +49,12 @@ export default {
   methods: {
     SubmitForm()
     {
-      let urlList = ['https://formspree.io/f/xayadkeb', 'https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141'];
-      urlList.forEach(url => document.forms['SendCallback'].action = url);
+      // let urlList = ['https://formspree.io/f/xayadkeb', 'https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141'];
+      // urlList.forEach(url => document.forms['SendCallback'].action = url);
+      let form = document.querySelector('form');
+      let data = new FormData(form);
+      axios.post('https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141', data);
+      axios.post('https://formspree.io/f/xayadkeb', data);
     }
   },
   computed: {
