@@ -38,40 +38,41 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from "axios";
+
 export default {
-  name: 'button',
+  name: 'SecondButton.vue',
   data() {
     return {
       showModal: false
     }
   },
   methods: {
-    SubmitForm() {
-      {
-        // let urlList = ['https://formspree.io/f/xayadkeb', 'https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141'];
-        // urlList.forEach(url => document.forms['SendCallback'].action = url);
-        let form = document.querySelector('form');
-        let data = new FormData(form);
-        axios.post('https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971', data);
-        axios.post('https://formspree.io/f/xayadkeb', data);
-      }
+    SubmitForm()
+    {
+      // let urlList = ['https://formspree.io/f/xayadkeb', 'https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141'];
+      // urlList.forEach(url => document.forms['SendCallback'].action = url);
+      let form = document.querySelector('form');
+      let data = new FormData(form);
+      axios.post('https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971', data);
+      axios.post('https://formspree.io/f/xayadkeb', data);
     }
   },
-  mounted() {
+  computed: {
     // window.addEventListener('load', function(){
-    //   let loc = document.getElementById("40280460a5108748ecf");
-    //   loc.value = window.location.href;
-    //   let ref = document.getElementById("40280460a5108748ecfref");
-    //   ref.value = document.referrer;
-    //
-    //   let statUrl = "https://lab.tb7.kz/stat/counter?ref=" + encodeURIComponent(document.referrer)
-    //       + "&loc=" + encodeURIComponent(document.location.href);
-    //   document.getElementById('gccounterImgContainer').innerHTML
-    //       = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
-    // });
+//   let loc = document.getElementById("40280460a5108748ecf");
+//   loc.value = window.location.href;
+//   let ref = document.getElementById("40280460a5108748ecfref");
+//   ref.value = document.referrer;
+//
+//   let statUrl = "https://lab.tb7.kz/stat/counter?ref=" + encodeURIComponent(document.referrer)
+//       + "&loc=" + encodeURIComponent(document.location.href);
+//   document.getElementById('gccounterImgContainer').innerHTML
+//       = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
+// });
   }
 }
+
 </script>
 
 <style lang="scss" scoped>
