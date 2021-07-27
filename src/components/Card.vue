@@ -3,15 +3,15 @@
     <div class="container">
       <div class="row">
         <div class="card yellow">
-          <div class="card-header yellow">
+          <div class="card-header ">
             <h4>15% теории <br>
               только важная информация</h4>
             <div class="card-img">
               <img src="@/assets/earth.svg" alt="">
             </div>
           </div>
-          <div class="card-body yellow">
-            <p class="yellow">
+          <div class="card-body ">
+            <p>
               Ты узнаешь: <br> <br>
               1) Как проверить заказчика на законную деятельность <br> <br>
               2) Как отличить выгодный тендер от не выгодного <br> <br>
@@ -22,15 +22,15 @@
           </div>
         </div>
         <div class="card red">
-          <div class="card-header red">
+          <div class="card-header">
             <h4>85% практики <br>
               быстрый результат</h4>
             <div class="card-img">
               <img src="@/assets/fire.svg" alt="">
             </div>
           </div>
-          <div class="card-body red">
-            <p class="red">
+          <div class="card-body">
+            <p>
               Ты узнаешь: <br> <br>
 
               1) Находить поставщиков за 5 минут <br> <br>
@@ -46,15 +46,15 @@
           </div>
         </div>
         <div class="card green">
-          <div class="card-header green">
+          <div class="card-header">
             <h4>Попутный ветер<br>
               для твоих крыльев</h4>
             <div class="card-img">
               <img src="@/assets/air.svg" alt="">
             </div>
           </div>
-          <div class="card-body green">
-            <p class="green">
+          <div class="card-body">
+            <p>
               Получи инвестицию на свой первый проект <br><br>
 
               Базовый пакет шаблонов документов для реализации заказа <br><br>
@@ -68,15 +68,15 @@
           </div>
         </div>
         <div class="card blue">
-          <div class="card-header blue">
+          <div class="card-header">
             <h4>Вливайся<br>
               в наше сообщество</h4>
             <div class="card-img">
               <img src="@/assets/water.svg" alt="">
             </div>
           </div>
-          <div class="card-body blue">
-            <p class="blue">
+          <div class="card-body">
+            <p>
               Эксперты курса поделятся приёмами и фишками <br>
               о которых вам больше никто не расскажет <br> <br>
 
@@ -142,7 +142,6 @@ export default {
         .card-header {
           display: flex;
           padding: 27px 27px 0 27px;
-          background-color: #2D2D2D;
           color: #fff;
           justify-content: space-between;
           @media(max-width: 1140px) {
@@ -181,7 +180,6 @@ export default {
 
 
         .card-body {
-          background-color: #2D2D2D;
           color: #FFFFFF;
           margin-top: 10px;
           padding: 0px 20px;
@@ -194,7 +192,6 @@ export default {
           }
 
           p {
-            color: #FFFFFF;
             text-align: left;
               @media(max-width: 1140px) {
                 margin: 13px 0;
@@ -205,31 +202,56 @@ export default {
         }
 
       }
-
       .card:hover {
         transform: scale(1.05);
         box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+        }
+      }
 
-        .yellow {
-          background: #FFED69;
+      .yellow:hover {
+        background-color: #FFED69;
+        color: #262626;
+        .card-header {
           color: #262626;
         }
-
-        .red {
-          background: #FF5E48;
-          color: #262626;
-        }
-
-        .green {
-          background: #A7F271;
-          color: #262626;
-        }
-
-        .blue {
-          background: #1265F5;
+        .card-body {
           color: #262626;
         }
       }
+
+      .red:hover {
+        background-color: #FF5E48;
+        color: #262626;
+        .card-header {
+          color: #262626;
+        }
+        .card-body {
+          color: #262626;
+        }
+      }
+
+      .green:hover {
+        background-color: #A7F271;
+        color: #262626;
+        .card-header {
+          color: #262626;
+        }
+        .card-body {
+          color: #262626;
+        }
+      }
+
+      .blue:hover {
+        background-color: #1265F5;
+        color: #262626;
+        .card-header {
+          color: #262626;
+        }
+        .card-body {
+          color: #262626;
+        }
+      }
+
       .second_btn {
         @media(max-width: 1140px) {
           width: 100%;
@@ -237,5 +259,4 @@ export default {
       }
     }
   }
-}
 </style>
