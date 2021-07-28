@@ -115,7 +115,7 @@
 
           .nasty {
             background: url("../assets/nasty.png") no-repeat;
-            background-position: 30% 50%;
+            background-position: 30% 91%;
             background-color: #262626;
             @media(max-width: 1140px) {
               //background-size: 500px;

@@ -19,9 +19,9 @@
       </p>
       <form id="SendCallback"  @submit="SubmitForm"  method="post" data-open-new-window="0">
         <input type="hidden" name="formParams[setted_offer_id]" ><br>
-        <input type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value=""><br>
-        <input type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
-        <input type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" ><br>
+        <input type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value="" required><br>
+        <input type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value="" required><br>
+        <input type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" required><br>
         <button type="submit" id="button6263071" class="simple-btn" onclick="if(window['btnprs60f17309f25cf']){return false;}window['btnprs60f17309f25cf']=true;setTimeout(function(){window['btnprs60f17309f25cf']=false},6000);return true;">
           Оставить заявку
         </button><br>
