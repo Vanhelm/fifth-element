@@ -41,7 +41,7 @@
 import axios from "axios";
 
 export default {
-  name: 'SecondButton.vue',
+  name: 'Button.vue',
   data() {
     return {
       showModal: false
