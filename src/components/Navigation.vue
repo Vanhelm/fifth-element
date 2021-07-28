@@ -11,7 +11,7 @@
         <li><a v-smooth-scroll href="#lesson" class="link" :to="{name: ''}">Новичкам</a></li>
         <li><a v-smooth-scroll @click="toggleActiveClass" href="#result" class="link" :to="{name: ''}">Результат</a></li>
         <li><a v-smooth-scroll href="#more" class="link" :to="{name: ''}">О нас</a></li>
-        <li><a class="link call" href="tel:+708 345 2321"><img src="@/assets/call.png" alt="Call">3883<div class="call__text"><br> Бесплатный <br> звонок</div></a></li>
+        <li><a class="link call" href="tel:3883"><img src="@/assets/call.png" alt="Call">3883<div class="call__text"><br> Бесплатный <br> звонок</div></a></li>
       </ul>
       <div class="icon">
         <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{'icon-active': mobileNav}"></i>
@@ -26,7 +26,7 @@
           <li><a class="link call" v-bind:href="'tel:' + 3883"><img src="@/assets/call.png" alt="Call">3883 <br> Бесплатный звонок</a></li>
         </ul>
       </transition>
-      <a class="link call__mobile" href="tel:+708 345 2321"><img src="@/assets/call-mobile.svg" alt="Call">3883<div class="call__text">Бесплатный звонок</div></a>
+      <a class="link call__mobile" href="tel:3883"><img src="@/assets/call-mobile.svg" alt="Call">3883<div class="call__text">Бесплатный звонок</div></a>
     </nav>
   </header>
 </template>

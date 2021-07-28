@@ -118,7 +118,7 @@
             background-position: 30% 50%;
             background-color: #262626;
             @media(max-width: 1140px) {
-              background-size: 500px;
+              //background-size: 500px;
             }
           }
           .nasty:hover {
@@ -130,7 +130,7 @@
             background-position: 55% 50%;
             background-color: #262626;
             @media(max-width: 1140px) {
-              background-size: 500px;
+              //background-size: 500px;
             }
           }
           .chingis:hover {
@@ -141,7 +141,7 @@
             background: url("../assets/aigerim.png") center no-repeat;
             background-color: #262626;
             @media(max-width: 1140px) {
-              background-size: 300px;
+              //background-size: 300px;
             }
           }
           .aika:hover {
