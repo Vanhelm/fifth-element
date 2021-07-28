@@ -22,6 +22,9 @@
         <span class="typed-text">{{ typeValue }}</span>
         <span class="cursor" :class="{'typing': typeStatus}">&nbsp;</span>
       </div>
+      <div class="whatsapp">
+        <a href="https://wa.me/77064289636?text=Добрый%20день%20мне%20нужна%20консультация%20по%20обучению"><img src="@/assets/whatsapp.svg" alt=""></a>
+      </div>
     </div>
   </section>
 </template>
@@ -200,6 +203,25 @@ export default {
           line-height: 15px;
           margin-top: 35px;
         }
+      }
+    }
+    .whatsapp {
+      position: fixed;
+      right: 200px;
+      bottom: 20px;
+      z-index: 999;
+      max-width: 80px;
+      width: 100%;
+      animation: beat .35s infinite alternate;
+      transform-origin: center;
+      @keyframes beat{
+        to { transform: scale(1.2); }
+      }
+      @media(max-width: 1140px) {
+        display: flex;
+        max-width: 60px;
+        width: 100%;
+        right: 35px;
       }
     }
   }

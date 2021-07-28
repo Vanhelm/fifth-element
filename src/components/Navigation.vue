@@ -11,6 +11,7 @@
         <li><a v-smooth-scroll href="#lesson" class="link" :to="{name: ''}">Новичкам</a></li>
         <li><a v-smooth-scroll @click="toggleActiveClass" href="#result" class="link" :to="{name: ''}">Результат</a></li>
         <li><a v-smooth-scroll href="#more" class="link" :to="{name: ''}">О нас</a></li>
+        <li><a class="link call" href="tel:+708 345 2321"><img src="@/assets/call.png" alt="Call">3883<div class="call__text"><br> Бесплатный <br> звонок</div></a></li>
       </ul>
       <div class="icon">
         <i @click="toggleMobileNav" v-show="mobile" class="far fa-bars" :class="{'icon-active': mobileNav}"></i>
@@ -22,8 +23,10 @@
           <li><a v-smooth-scroll href="#lesson" class="link" :to="{name: ''}">Новичкам</a></li>
           <li><a v-smooth-scroll href="#result" class="link" :to="{name: ''}">Результат</a></li>
           <li><a v-smooth-scroll href="#more" class="link" :to="{name: ''}">О нас</a></li>
+          <li><a class="link call" href="tel:3883"><img src="@/assets/call.png" alt="Call">3883 <br> Бесплатный звонок</a></li>
         </ul>
       </transition>
+      <a class="link call__mobile" href="tel:+708 345 2321"><img src="@/assets/call-mobile.svg" alt="Call">3883<div class="call__text">Бесплатный звонок</div></a>
     </nav>
   </header>
 </template>
@@ -104,7 +107,7 @@ export default {
       position: relative;
       display: flex;
       flex-direction: row;
-      padding: 12px 0;
+      //padding: 12px 0;
       transition: .5s ease all;
       width: 90%;
       margin: 0 auto;
@@ -126,19 +129,37 @@ export default {
       li {
         padding: 16px;
         margin-left: 16px;
+        .link {
+          font-size: 20px;
+          transition: 0.5s ease all;
+          padding-bottom: 4px;
+          border-bottom: 1px solid transparent;
+
+          &:hover {
+            color: #262626;
+            border-color: #262626;
+          }
         }
-
-      .link {
-        font-size: 20px;
-        transition: 0.5s ease all;
-        padding-bottom: 4px;
-        border-bottom: 1px solid transparent;
-
-        &:hover {
-          color: #262626;
-          border-color: #262626;
+        .call {
+          font-size: 20px;
+          color: #FF5E48;
+          img {
+            display: inline-block;
+            padding-top: 30px;
+            position: relative;
+            top: 3px;
+            right: 3px;
+          }
+          .call__text {
+            margin-left: 17px;
+            font-size: 10px;
+          }
         }
       }
+
+
+
+
 
 
 
@@ -193,6 +214,27 @@ export default {
           .link {
             color: #E5E5E5;
           }
+        }
+      }
+      .call__mobile {
+        display: none;
+        @media(max-width: 1140px) {
+          margin: 0 auto;
+          margin-top: 7px;
+          display: inline-block;
+          font-size: 12px;
+        }
+        img {
+          position: relative;
+          top: 2px;
+          right: 2px;
+          display: inline-block;
+        }
+        .call__text {
+          display: inline-block;
+          position: relative;
+          left: 2px;
+          font-size: 9px;
         }
       }
     }
