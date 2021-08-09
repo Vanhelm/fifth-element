@@ -37,8 +37,6 @@
 </template>
 
 <script>
-import axios from "axios";
-
 export default {
   name: 'SecondButton.vue',
   data() {
@@ -47,14 +45,16 @@ export default {
     }
   },
   methods: {
-    SubmitForm()
-    {
-      // let urlList = ['https://formspree.io/f/xayadkeb', 'https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141'];
-      // urlList.forEach(url => document.forms['SendCallback'].action = url);
-      let form = document.querySelector('form');
-      let data = new FormData(form);
-      axios.post('https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141', data);
-      axios.post('https://formspree.io/f/xayadkeb', data);
+    SubmitForm: function()  {
+      document.forms['SendCallback'].action='https://formspree.io/f/xayadkeb';
+      document.forms['SendCallback'].target='frame_result';
+      document.forms['SendCallback'].submit();
+      setTimeout(() => {
+        document.forms['SendCallback'].action='https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141';
+        document.forms['SendCallback'].target='frame_result';
+        document.forms['SendCallback'].submit();
+      }, 2000);
+      return true;
     }
   },
   computed: {
@@ -71,7 +71,6 @@ export default {
 // });
   }
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -101,23 +100,17 @@ export default {
     color: #ffffff;
   }
 }
-
-
-
 .button {
   appearance: none;
   outline: none;
   border: none;
   background: none;
   cursor: pointer;
-
   display: inline-block;
-
   color: #FFF;
   font-size: 18px;
   font-weight: 700;
 }
-
 .modal-overlay {
   position: absolute;
   top: 0;
@@ -127,7 +120,6 @@ export default {
   z-index: 98;
   background-color: rgba(0, 0, 0, 0.3);
 }
-
 .modal {
   position: fixed;
   top: 50%;
@@ -146,7 +138,6 @@ export default {
     max-width: 100%;
     height: 450px;
   }
-
   .material-icons {
     display: inline-block;
     color: black;
@@ -155,7 +146,6 @@ export default {
     top: 5px;
     right: 7px;
   }
-
   h1 {
     font-family: Raleway;
     margin: 0 auto;
@@ -174,7 +164,6 @@ export default {
       color: #333333;
     }
   }
-
   p {
     font-family: Raleway;
     color: #333333;
@@ -190,9 +179,7 @@ export default {
       line-height: 16px;
     }
   }
-
   form {
-
     input {
       margin-top: 22px;
       width: 100%;
@@ -204,7 +191,6 @@ export default {
       border-radius: 10px;
       text-align: center;
     }
-
     .simple-btn {
       display: inline-block;
       padding: 1.625rem 2.625rem 1.625rem 2.625rem;
@@ -233,23 +219,18 @@ export default {
     }
   }
 }
-
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity .5s;
 }
-
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
 }
-
 .slide-enter-active,
 .slide-leave-active {
   transition: transform .5s;
 }
-
 .slide-enter,
 .slide-leave-to {
   transform: translateY(-50%) translateX(100vw);

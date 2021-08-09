@@ -18,12 +18,12 @@
         ответим на интересующие вопросы, <br>
         оставим комерческое предложение.
       </p>
-      <form id="SendCallback" method="POST" @submit="SubmitForm"  target='formresponse'>
+      <form id="SendCallback" v-on:submit.prevent="SubmitForm()" method="post" data-open-new-window="0">
         <input type="hidden" name="formParams[setted_offer_id]" ><br>
         <input id="name" type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value="" required><br>
         <input id="phone" type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value="" required><br>
         <input id="email" type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" required><br>
-        <button name='Submit' value="submit" type="submit" id="button1914629" class="simple-btn" onclick="if(window['btnprs60a5108755951']){return false;}window['btnprs60a5108755951']=true;setTimeout(function(){window['btnprs60a5108755951']=false},6000);return true;">
+        <button type="submit" id="button1914629" class="simple-btn" onclick="if(window['btnprs60a5108755951']){return false;}window['btnprs60a5108755951']=true;setTimeout(function(){window['btnprs60a5108755951']=false},6000);return true;">
           Оставить заявку
         </button><br>
         <input type="hidden" id="40280460a5108748ecf" name="__gc__internal__form__helper" class="__gc__internal__form__helper" value="">
@@ -32,15 +32,12 @@
         <input type="hidden" name="requestSimpleSign" value="b694e8e66091b669c1402b14d1ca5236">
         <input type="hidden" name="isHtmlWidget" value="1"/>
       </form>
-      <iframe style="display: none" name='formresponse'></iframe>
       <span id="gccounterImgContainer"></span>
     </div>
   </transition>
 </template>
 
 <script>
-// import axios from "axios";
-
 export default {
   name: 'Button.vue',
   data() {
@@ -49,22 +46,15 @@ export default {
     }
   },
   methods: {
-    SubmitForm()
-    {
-      // let urlList = ['https://formspree.io/f/xayadkeb', 'https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141'];
-      // urlList.forEach(url => document.forms['SendCallback'].action = url);
-      // let form = document.querySelector('form');
-      // let data = new FormData(form);
-      // axios.post('https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971', data);
-      // axios.post('https://formspree.io/f/xayadkeb', data);
-
-      document.forms['SendCallback'].action='https://formspree.io/f/moqynbqo';
+    SubmitForm: function()  {
+      document.forms['SendCallback'].action='https://formspree.io/f/xayadkeb';
       document.forms['SendCallback'].target='frame_result';
       document.forms['SendCallback'].submit();
-
-      document.forms['SendCallback'].action='https://formspree.io/f/xayadkeb';
-      document.forms['SendCallback'].target='frame_result1';
-      document.forms['SendCallback'].submit();
+      setTimeout(() => {
+        document.forms['SendCallback'].action='https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971';
+        document.forms['SendCallback'].target='frame_result';
+        document.forms['SendCallback'].submit();
+      }, 2000);
       return true;
     }
   },
@@ -82,7 +72,6 @@ export default {
 // });
   }
 }
-
 </script>
 
 <style lang="scss" scoped>
