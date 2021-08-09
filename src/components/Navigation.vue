@@ -136,12 +136,20 @@ export default {
       li {
         padding: 16px;
         margin-left: 16px;
+        @media(max-width: 1140px) {
+          padding: 0;
+        }
         .link {
           font-size: 20px;
           transition: 0.5s ease all;
           padding-bottom: 4px;
           border-bottom: 1px solid transparent;
-
+          @media(max-width: 768px) {
+            font-size: 15px;
+          }
+          @media(min-width: 1140px) {
+            font-size: 20px;
+          }
           &:hover {
             color: #262626;
             border-color: #262626;
@@ -220,7 +228,13 @@ export default {
       }
       .call__mobile {
         display: none;
-        @media(max-width: 750px) {
+        @media(max-width: 320px) {
+          display: inline-block;
+          margin: 0 auto;
+          margin-top: 7px;
+          font-size: 0px;
+        }
+        @media(min-width: 325px) and (max-width: 765px) {
           margin: 0 auto;
           margin-top: 7px;
           display: inline-block;
