@@ -159,6 +159,9 @@ export default {
             width: 100%;
             margin-bottom: 40px;
           }
+          @media(max-width: 1024px) {
+            width: 100%;
+          }
         }
       }
       .wrapper__btn {
@@ -168,6 +171,9 @@ export default {
         @media(max-width: 1140px) {
           width: 100%;
           margin: 8px;
+        }
+        @media(max-width: 1024px) {
+          width: 100%;
         }
       }
     }
@@ -199,9 +205,14 @@ export default {
         margin-top: 60px;
         @media(max-width: 1140px) {
           font-family: Raleway;
-          font-size: 15px;
+          font-size: 12px;
           line-height: 15px;
-          margin-top: 35px;
+          margin-top: 28px;
+        }
+        @media(min-width: 768px) {
+          font-size: 30px;
+          line-height: 15px;
+          margin-top: 50px;
         }
       }
     }

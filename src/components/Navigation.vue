@@ -83,7 +83,14 @@ export default {
     position: fixed;
     transition: 0.5s ease all;
     color: #000000;
-    @media(max-width: 1140px) {
+    @media (max-width: 551px) {
+      width: 100%;
+    }
+    @media (max-width: 991px) {
+      padding: 10px;
+      width: 100%;
+    }
+    @media (max-width: 1200px) {
       position: fixed;
       width: 100%;
     }
@@ -158,11 +165,6 @@ export default {
       }
 
 
-
-
-
-
-
         .branding {
           display: flex;
           align-items: center;
@@ -218,7 +220,7 @@ export default {
       }
       .call__mobile {
         display: none;
-        @media(max-width: 1140px) {
+        @media(max-width: 750px) {
           margin: 0 auto;
           margin-top: 7px;
           display: inline-block;

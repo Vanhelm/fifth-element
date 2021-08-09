@@ -116,8 +116,10 @@ import Button from "./UI/Button";
 
             .results__img {
               display: flex;
-              width: 585px;
               max-width: 100%;
+              @media(min-width: 1140px) {
+                width: 585px;
+              }
               a {
                 display: flex;
                 img {
