@@ -106,10 +106,9 @@ export default {
 
 <style lang="scss" scoped>
 .basic-1 {
-  background-color: #262626;
-  padding-bottom: 2rem;
+  background-color: #20163a;
+  padding: 2rem 0;
   @media(max-width: 1140px) {
-    padding-top: 0;
   }
 
   .container {
@@ -127,10 +126,10 @@ export default {
         padding-bottom: 0;
         display: flex;
         flex-direction: column;
-        border: 1px solid #2D2D2D;
+        border: 1px solid #272247;
         margin-bottom: 25px;
         transition: 0.3s;
-        background: #2D2D2D;
+        background: #272247;
         border-radius: 10px;
         width: 500px;
         @media(max-width: 1140px) {
@@ -153,7 +152,6 @@ export default {
           h4 {
             display: flex;
             justify-content: space-between;
-            font-family: Raleway;
             font-style: normal;
             font-weight: bold;
             font-size: 24px;
@@ -165,7 +163,6 @@ export default {
           }
 
           p {
-            font-family: Raleway;
             font-style: normal;
             font-weight: bold;
             font-size: 16px;

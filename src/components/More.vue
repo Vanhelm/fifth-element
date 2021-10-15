@@ -38,7 +38,8 @@ import Instagram from "./UI/Instagram";
     .more__container {
       display: flex;
       flex-direction: row;
-      margin: 0 150px;
+      width: 1140px;
+      margin: 0 auto;
       align-items: center;
       @media(max-width: 1140px) {
         margin: 0 auto;
@@ -51,7 +52,6 @@ import Instagram from "./UI/Instagram";
           max-width: 100%;
         }
         h1 {
-          font-family: Raleway;
           font-style: normal;
           font-weight: bold;
           font-size: 40px;
@@ -60,7 +60,7 @@ import Instagram from "./UI/Instagram";
             font-weight: bold;
             font-size: 20px;
             line-height: 23px;
-            margin-left: 9px;
+            margin-left: 22px;
           }
         }
         .social {

@@ -7,8 +7,8 @@
         </div>
       </div>
     </section>
-      <Card id="card"></Card>
       <Lesson id="lesson"></Lesson>
+      <Card id="card"></Card>
       <Result id="result"></Result>
       <Curator></Curator>
       <More id="more"></More>
@@ -42,7 +42,7 @@ export default {
 .home {
   margin: 0 auto;
   .course {
-    background-color: #262626;
+    background-color: #20163a;
     color: #FFFFFF;
     background-attachment: fixed;
     position: relative;

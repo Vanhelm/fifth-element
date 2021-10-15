@@ -48,28 +48,26 @@ import Button from "./UI/Button";
 <style lang="scss" scoped>
   .results {
     display: flex;
-    padding: 12px 0;
     max-width: 1140px;
+    width: 100%;
     margin: 0 auto;
-    @media(max-width: 840px) {
+    @media(max-width: 545px) {
       justify-content: center;
     }
 
     .results__wrapper {
       display: flex;
       position: relative;
-      margin: 56px auto;
       transition: .5s ease all;
       flex-direction: column;
       width: 100%;
-      @media(max-width: 1140px) {
+      @media(max-width: 545px) {
+        margin: 0;
         padding: 22px;
-        margin: 8px;
         flex-direction: column;
       }
 
       h1 {
-        font-family: Raleway;
         font-style: normal;
         font-weight: bold;
         font-size: 40px;
@@ -101,7 +99,6 @@ import Button from "./UI/Button";
             display: flex;
             flex-direction: column;
             p {
-              font-family: Raleway;
               font-style: normal;
               font-weight: bold;
               font-size: 18px;
@@ -117,8 +114,8 @@ import Button from "./UI/Button";
             .results__img {
               display: flex;
               max-width: 100%;
-              @media(min-width: 1140px) {
-                width: 585px;
+              @media(min-width: 545px) {
+                width: 545px;
               }
               a {
                 display: flex;
@@ -136,7 +133,8 @@ import Button from "./UI/Button";
         display: inline-block;
         margin: 0 auto;
         margin-top: 55px;
-        @media(max-width: 1140px) {
+        @media(max-width: 545px) {
+          margin-top: 0;
           width: 100%;
         }
       }

@@ -66,7 +66,6 @@
   .curator {
     .curator__wrapper {
       display: flex;
-      padding: 12px 0;
       max-width: 1140px;
       margin: 0 auto;
       @media(max-width: 840px) {
@@ -150,7 +149,6 @@
 
           .block__description {
             padding-top: 19px;
-            font-family: Raleway;
             font-style: normal;
             font-weight: bold;
             line-height: 20px;
@@ -161,7 +159,6 @@
             }
 
             h1 {
-              font-family: Raleway;
               font-style: normal;
               font-weight: bold;
               font-size: 16px;
@@ -172,7 +169,6 @@
 
             p {
               padding-top: 19px;
-              font-family: Raleway;
               font-style: normal;
               font-size: 16px;
             }

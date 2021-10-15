@@ -87,7 +87,6 @@ export default {
 <style lang="scss" scoped>
 .free {
   display: flex;
-  padding: 12px 0;
   max-width: 1140px;
   margin: 0 auto;
   @media(max-width: 840px) {
@@ -99,8 +98,6 @@ export default {
     display: flex;
     flex-direction: row;
     position: relative;
-    margin: 56px auto;
-    padding: 12px 0;
     transition: .5s ease all;
     @media(max-width: 1140px) {
       padding: 12px 0;
@@ -116,7 +113,6 @@ export default {
       height: 100%;
       @media(max-width: 1140px) {
         width: 100%;
-        font-family: Raleway;
         font-style: normal;
         font-weight: bold;
         font-size: 20px;
@@ -126,7 +122,6 @@ export default {
       }
       .header__text {
         h1 {
-          font-family: Raleway;
           font-style: normal;
           font-weight: bold;
           font-size: 40px;
@@ -134,7 +129,6 @@ export default {
           color: #fff;
           @media(max-width: 1140px) {
             width: 100%;
-            font-family: Raleway;
             font-style: normal;
             font-weight: bold;
             font-size: 20px;
@@ -145,7 +139,6 @@ export default {
 
         p {
           width: 585px;
-          font-family: Raleway;
           font-style: normal;
           font-weight: normal;
           font-size: 18px;
@@ -165,11 +158,7 @@ export default {
         display: flex;
         flex-direction: column;
         position: relative;
-        @media(max-width: 1140px) {
-          width: 100%;
-          margin: 8px;
-        }
-        @media(max-width: 1024px) {
+        @media(max-width: 545px) {
           width: 100%;
         }
       }
@@ -191,7 +180,6 @@ export default {
       span {
         display: flex;
         position: absolute;
-        font-family: Raleway;
         font-style: normal;
         font-weight: bold;
         font-size: 27px;
@@ -201,7 +189,6 @@ export default {
         color: rgb(255, 255, 255);
         margin-top: 60px;
         @media(max-width: 1140px) {
-          font-family: Raleway;
           font-size: 12px;
           line-height: 15px;
           margin-top: 28px;

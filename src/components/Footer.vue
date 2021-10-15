@@ -45,17 +45,20 @@ import SecondButton from "./UI/SecondButton";
 <style lang="scss" scoped>
   .footer {
     display: flex;
-    background-color: #262626;
+    background-color: #20163a;
     margin-top: 46px;
     background-size: 90%;
-    @media(max-width: 1140px) {
+    @media(max-width: 545px) {
       flex-direction: column;
     }
     .footer__wrapper {
       display: flex;
-      @media(max-width: 1140px) {
+      width: 1140px;
+      margin: 0 auto;
+      @media(max-width: 545px) {
+        width: 100%;
         flex-direction: column;
-        margin: 22px;
+        margin: 0px;
       }
       .footer__block {
         display: flex;
@@ -72,14 +75,13 @@ import SecondButton from "./UI/SecondButton";
           color: #FFFFFF;
 
           h1 {
-            font-family: Raleway;
             font-style: normal;
             font-weight: bold;
             font-size: 40px;
             line-height: 47px;
-            @media(max-width: 1140px) {
+            @media(max-width: 545px) {
               margin-top: 15px;
-              margin-left: 9px;
+              margin-left: 22px;
               font-weight: bold;
               font-size: 20px;
               line-height: 23px;
@@ -87,7 +89,6 @@ import SecondButton from "./UI/SecondButton";
           }
 
           p {
-            font-family: Raleway;
             font-style: normal;
             font-weight: normal;
             font-size: 18px;
@@ -95,7 +96,7 @@ import SecondButton from "./UI/SecondButton";
             margin-top: 29px;
             margin-bottom: 49px;
             @media(max-width: 1140px) {
-              margin-left: 9px;
+              margin-left: 22px;
             }
           }
         }

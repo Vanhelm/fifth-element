@@ -79,9 +79,9 @@ export default {
   .simple-btn {
     display: inline-block;
     padding: 1.625rem 2.625rem 1.625rem 2.625rem;
-    border: 1px solid #A7F271;
+    border: 1px solid #58be00;
     border-radius: 10px;
-    background-color: #A7F271;
+    background-color: #58be00;
     color: #000000;
     font-weight: 600;
     font-size: 0.875rem;
@@ -147,7 +147,6 @@ export default {
     right: 7px;
   }
   h1 {
-    font-family: Raleway;
     margin: 0 auto;
     color: #333333;
     font-style: normal;
@@ -156,7 +155,6 @@ export default {
     line-height: 47px;
     margin-bottom: 15px;
     @media(max-width: 1140px) {
-      font-family: Raleway;
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
@@ -165,14 +163,12 @@ export default {
     }
   }
   p {
-    font-family: Raleway;
     color: #333333;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
     margin: 15px 0;
     @media(max-width: 1140px) {
-      font-family: Raleway;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
