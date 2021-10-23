@@ -4,7 +4,7 @@
       <div class="container">
         <div class="curator__block">
           <div class="block__img nasty">
-            <div class="icon__img"><img src="@/assets/curator.png" alt=""></div>
+            <div class="icon__img"><img src="@/assets/curator.svg" alt=""></div>
           </div>
           <div class="block__description">
             <h1>Куратор</h1>
@@ -17,7 +17,7 @@
         </div>
         <div class="curator__block">
           <div class="block__img chingis">
-            <div class="icon__img"><img src="@/assets/curator.png" alt=""></div>
+            <div class="icon__img"><img src="@/assets/curator.svg" alt=""></div>
           </div>
           <div class="block__description">
             <h1>Лектор</h1>
@@ -33,7 +33,7 @@
         </div>
         <div class="curator__block">
           <div class="block__img aika">
-            <div class="icon__img"><img src="@/assets/curator.png" alt=""></div>
+            <div class="icon__img"><img src="@/assets/curator.svg" alt=""></div>
           </div>
           <div class="block__description">
             <h1>Куратор</h1>
@@ -115,36 +115,36 @@
           .nasty {
             background: url("../assets/nasty.png") no-repeat;
             background-position: 30% 101%;
-            background-color: #262626;
+            background-color: #20163a;
             @media(max-width: 1140px) {
               //background-size: 500px;
             }
           }
           .nasty:hover {
-            background-color: #FFED69;
+            background-color: #58be00;
           }
 
           .chingis {
             background: url("../assets/chingis.png") no-repeat;
             background-position: 55% 50%;
-            background-color: #262626;
+            background-color: #20163a;
             @media(max-width: 1140px) {
               //background-size: 500px;
             }
           }
           .chingis:hover {
-            background-color: #FFED69;
+            background-color: #58be00;
           }
 
           .aika {
             background: url("../assets/aigerim.png") center no-repeat;
-            background-color: #262626;
+            background-color: #20163a;
             @media(max-width: 1140px) {
               //background-size: 300px;
             }
           }
           .aika:hover {
-            background-color: #FFED69;
+            background-color: #58be00;
           }
 
           .block__description {
