@@ -4,7 +4,7 @@
       <div class="wrapper__text">
         <div class="header__text">
           <h1>
-            Курс «Пятый элемент» <br>
+            Курс «Пятый элемент» -<br>
             обуздай тендерную стихию.
           </h1>
           <p>
