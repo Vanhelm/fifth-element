@@ -51,7 +51,7 @@ export default {
       var name = document.forms['SendCallback'].elements['name'].value;
       var email = document.forms['SendCallback'].elements['email'].value;
       if(phone && name && email){
-        const url = 'http://cloud.roistat.com/api/proxy/1.0/leads/add?key=NmEwMWZkNDZiZGFlOWY0Y2ZhYzQ4ZWQyMGMzZmQ3ODA6MjAxODkw&is_skip_sending=1&name='
+        const url = 'https://cloud.roistat.com/api/proxy/1.0/leads/add?key=NmEwMWZkNDZiZGFlOWY0Y2ZhYzQ4ZWQyMGMzZmQ3ODA6MjAxODkw&is_skip_sending=1&name='
             + name +'&phone=' + phone + '&email=' + email;
         const myInit = {
           method: 'POST',
