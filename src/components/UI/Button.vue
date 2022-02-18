@@ -38,6 +38,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'Button.vue',
   data() {
@@ -47,6 +48,26 @@ export default {
   },
   methods: {
     SubmitForm: function()  {
+      // Roistat start
+      var phone = document.forms['SendCallback'].elements['phone'].value;
+      var name = document.forms['SendCallback'].elements['name'].value;
+      var email = document.forms['SendCallback'].elements['email'].value;
+      if(phone && name && email){
+      const url = 'http://cloud.roistat.com/api/proxy/1.0/leads/add?key=NmEwMWZkNDZiZGFlOWY0Y2ZhYzQ4ZWQyMGMzZmQ3ODA6MjAxODkw&is_skip_sending=1&name='
+      + name +'&phone=' + phone + '&email=' + email;
+        const myInit = {
+          method: 'POST',
+          mode: 'no-cors',
+        };
+
+        const myRequest = new Request(url, myInit);
+
+        fetch(myRequest).then(function(response) {
+          return response;
+        })
+      }
+      // end roistat
+
       document.forms['SendCallback'].action='https://formspree.io/f/xayadkeb';
       document.forms['SendCallback'].target='frame_result';
       document.forms['SendCallback'].submit();
