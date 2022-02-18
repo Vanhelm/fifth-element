@@ -17,10 +17,11 @@
         Заполни поля, и проверь почту. <br>
         3 бесплатных пробных урока будут ждать тебя там!
       </p>
-      <form id="SendCallback" @submit="SubmitForm" method="post" data-open-new-window="0"><input type="hidden" name="formParams[setted_offer_id]" ><br>
-        <input type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value=""><br>
-        <input type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
-        <input type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" ><br>
+      <form id="SendCallback"  v-on:submit.prevent="SubmitForm()"  method="post" data-open-new-window="0">
+        <input type="hidden" name="formParams[setted_offer_id]" ><br>
+        <input type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value="" id="name" required><br>
+        <input type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value="" id="phone" required><br>
+        <input type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" id="email" required><br>
         <button type="submit" id="button6263071" class="simple-btn" onclick="if(window['btnprs60f17309f25cf']){return false;}window['btnprs60f17309f25cf']=true;setTimeout(function(){window['btnprs60f17309f25cf']=false},6000);return true;">
           Оставить заявку
         </button><br>
@@ -44,14 +45,40 @@ export default {
     }
   },
   methods: {
-    SubmitForm()
-    {
-      let urlList = ['https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141', 'https://formspree.io/f/xayadkeb'];
-      urlList.forEach(url => document.forms['SendCallback'].action = url);
+    SubmitForm: function()  {
+      // Roistat start
+      var phone = document.forms['SendCallback'].elements['phone'].value;
+      var name = document.forms['SendCallback'].elements['name'].value;
+      var email = document.forms['SendCallback'].elements['email'].value;
+      if(phone && name && email){
+        const url = 'https://cloud.roistat.com/api/proxy/1.0/leads/add?key=NmEwMWZkNDZiZGFlOWY0Y2ZhYzQ4ZWQyMGMzZmQ3ODA6MjAxODkw&is_skip_sending=1&name='
+            + name +'&phone=' + phone + '&email=' + email;
+        const myInit = {
+          method: 'POST',
+          mode: 'no-cors',
+        };
+
+        const myRequest = new Request(url, myInit);
+
+        fetch(myRequest).then(function(response) {
+          return response;
+        })
+      }
+      // end roistat
+
+      document.forms['SendCallback'].action='https://formspree.io/f/xayadkeb';
+      document.forms['SendCallback'].target='frame_result';
+      document.forms['SendCallback'].submit();
+      setTimeout(() => {
+        document.forms['SendCallback'].action='https://lab.tb7.kz/pl/lite/block-public/process-html?id=1103878141';
+        document.forms['SendCallback'].target='frame_result';
+        document.forms['SendCallback'].submit();
+      }, 2000);
+      return true;
     }
-  }
-}
-// window.addEventListener('load', function(){
+  },
+  computed: {
+    // window.addEventListener('load', function(){
 //   let loc = document.getElementById("40280460a5108748ecf");
 //   loc.value = window.location.href;
 //   let ref = document.getElementById("40280460a5108748ecfref");
@@ -62,6 +89,8 @@ export default {
 //   document.getElementById('gccounterImgContainer').innerHTML
 //       = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
 // });
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -70,9 +99,9 @@ export default {
   .simple-btn {
     display: inline-block;
     padding: 1.625rem 2.625rem 1.625rem 2.625rem;
-    border: 1px solid #A7F271;
+    border: 1px solid #58be00;
     border-radius: 10px;
-    background-color: #A7F271;
+    background-color: #58be00;
     color: #000000;
     font-weight: 600;
     font-size: 0.875rem;
@@ -91,23 +120,17 @@ export default {
     color: #ffffff;
   }
 }
-
-
-
 .button {
   appearance: none;
   outline: none;
   border: none;
   background: none;
   cursor: pointer;
-
   display: inline-block;
-
   color: #FFF;
   font-size: 18px;
   font-weight: 700;
 }
-
 .modal-overlay {
   position: absolute;
   top: 0;
@@ -117,7 +140,6 @@ export default {
   z-index: 98;
   background-color: rgba(0, 0, 0, 0.3);
 }
-
 .modal {
   position: fixed;
   top: 50%;
@@ -136,7 +158,6 @@ export default {
     max-width: 100%;
     height: 450px;
   }
-
   .material-icons {
     display: inline-block;
     color: black;
@@ -145,9 +166,7 @@ export default {
     top: 5px;
     right: 7px;
   }
-
   h1 {
-    font-family: Raleway;
     margin: 0 auto;
     color: #333333;
     font-style: normal;
@@ -156,7 +175,6 @@ export default {
     line-height: 47px;
     margin-bottom: 15px;
     @media(max-width: 1140px) {
-      font-family: Raleway;
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
@@ -164,25 +182,20 @@ export default {
       color: #333333;
     }
   }
-
   p {
-    font-family: Raleway;
     color: #333333;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
     margin: 15px 0;
     @media(max-width: 1140px) {
-      font-family: Raleway;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
       line-height: 16px;
     }
   }
-
   form {
-
     input {
       margin-top: 22px;
       width: 100%;
@@ -194,7 +207,6 @@ export default {
       border-radius: 10px;
       text-align: center;
     }
-
     .simple-btn {
       display: inline-block;
       padding: 1.625rem 2.625rem 1.625rem 2.625rem;
@@ -223,23 +235,18 @@ export default {
     }
   }
 }
-
-
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity .5s;
 }
-
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
 }
-
 .slide-enter-active,
 .slide-leave-active {
   transition: transform .5s;
 }
-
 .slide-enter,
 .slide-leave-to {
   transform: translateY(-50%) translateX(100vw);

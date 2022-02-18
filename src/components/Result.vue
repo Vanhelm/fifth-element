@@ -5,11 +5,11 @@
       <div class="results__body">
         <div class="results__block">
           <div class="block">
-            <div><p>«Стала зарабатывать и все <br>
+            <div><p>«Стала зарабатывать, и все <br>
               в меня поверили»</p></div>
             <div class="results__img">
               <a href="https://www.youtube.com/watch?v=6npnSzK90Eg&ab_channel=%D0%A2%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%D0%91%D0%B8%D1%80%D0%B6%D0%B0" target="_blank">
-                <img src="@/assets/сандугаш.png" alt="">
+                <img src="@/assets/female.png" alt="">
               </a>
             </div>
           </div>
@@ -22,7 +22,7 @@
             </p></div>
             <div class="results__img">
               <a href="https://www.youtube.com/watch?v=9IEK5RuZymI&ab_channel=%D0%A2%D0%B5%D0%BD%D0%B4%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%D0%91%D0%B8%D1%80%D0%B6%D0%B0" target="_blank">
-                <img src="@/assets/male.svg" alt="">
+                <img src="@/assets/male.png" alt="">
               </a>
             </div>
           </div>
@@ -48,28 +48,26 @@ import Button from "./UI/Button";
 <style lang="scss" scoped>
   .results {
     display: flex;
-    padding: 12px 0;
     max-width: 1140px;
+    width: 100%;
     margin: 0 auto;
-    @media(max-width: 840px) {
+    @media(max-width: 545px) {
       justify-content: center;
     }
 
     .results__wrapper {
       display: flex;
       position: relative;
-      margin: 56px auto;
       transition: .5s ease all;
       flex-direction: column;
       width: 100%;
-      @media(max-width: 1140px) {
+      @media(max-width: 545px) {
+        margin: 0;
         padding: 22px;
-        margin: 8px;
         flex-direction: column;
       }
 
       h1 {
-        font-family: Raleway;
         font-style: normal;
         font-weight: bold;
         font-size: 40px;
@@ -101,7 +99,6 @@ import Button from "./UI/Button";
             display: flex;
             flex-direction: column;
             p {
-              font-family: Raleway;
               font-style: normal;
               font-weight: bold;
               font-size: 18px;
@@ -116,8 +113,10 @@ import Button from "./UI/Button";
 
             .results__img {
               display: flex;
-              width: 585px;
               max-width: 100%;
+              @media(min-width: 545px) {
+                width: 545px;
+              }
               a {
                 display: flex;
                 img {
@@ -134,7 +133,8 @@ import Button from "./UI/Button";
         display: inline-block;
         margin: 0 auto;
         margin-top: 55px;
-        @media(max-width: 1140px) {
+        @media(max-width: 545px) {
+          margin-top: 0;
           width: 100%;
         }
       }

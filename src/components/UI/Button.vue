@@ -11,18 +11,18 @@
         <i class="material-icons" v-on:click.stop.prevent="showModal = false">close</i>
       </span>
       <h1>Войди уверенно в мир <br>
-          крупного заработка!
+        крупного заработка!
       </h1>
       <p>
         Заполни поля и мы свяжемся с тобой, <br>
         ответим на интересующие вопросы, <br>
         оставим комерческое предложение.
       </p>
-      <form id="SendCallback" @submit="SubmitForm" method="post" data-open-new-window="0">
+      <form id="SendCallback" v-on:submit.prevent="SubmitForm()" method="post" data-open-new-window="0">
         <input type="hidden" name="formParams[setted_offer_id]" ><br>
-        <input type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value=""><br>
-        <input type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value=""><br>
-        <input type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" ><br>
+        <input id="name" type="text" maxlength="60"  placeholder="Имя Фамилия" name="formParams[full_name]" value="" required><br>
+        <input id="phone" type="text" maxlength="60"  placeholder="Телефон" name="formParams[phone]" value="" required><br>
+        <input id="email" type="text" maxlength="60"  placeholder="Электронный адрес" name="formParams[email]" value="" required><br>
         <button type="submit" id="button1914629" class="simple-btn" onclick="if(window['btnprs60a5108755951']){return false;}window['btnprs60a5108755951']=true;setTimeout(function(){window['btnprs60a5108755951']=false},6000);return true;">
           Оставить заявку
         </button><br>
@@ -38,34 +38,61 @@
 </template>
 
 <script>
- export default {
-   name: 'button',
-   data() {
-     return {
-        showModal: false
-     }
-   },
-   methods: {
-     SubmitForm()
-     {
-       let urlList = ['https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971', 'https://formspree.io/f/xayadkeb'];
-       urlList.forEach(url => document.forms['SendCallback'].action = url);
-     }
-   },
-   mounted() {
-     // window.addEventListener('load', function(){
-     //   let loc = document.getElementById("40280460a5108748ecf");
-     //   loc.value = window.location.href;
-     //   let ref = document.getElementById("40280460a5108748ecfref");
-     //   ref.value = document.referrer;
-     //
-     //   let statUrl = "https://lab.tb7.kz/stat/counter?ref=" + encodeURIComponent(document.referrer)
-     //       + "&loc=" + encodeURIComponent(document.location.href);
-     //   document.getElementById('gccounterImgContainer').innerHTML
-     //       = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
-     // });
-   }
- }
+
+export default {
+  name: 'Button.vue',
+  data() {
+    return {
+      showModal: false
+    }
+  },
+  methods: {
+    SubmitForm: function()  {
+      // Roistat start
+      var phone = document.forms['SendCallback'].elements['phone'].value;
+      var name = document.forms['SendCallback'].elements['name'].value;
+      var email = document.forms['SendCallback'].elements['email'].value;
+      if(phone && name && email){
+      const url = 'https://cloud.roistat.com/api/proxy/1.0/leads/add?key=NmEwMWZkNDZiZGFlOWY0Y2ZhYzQ4ZWQyMGMzZmQ3ODA6MjAxODkw&is_skip_sending=1&name='
+      + name +'&phone=' + phone + '&email=' + email;
+        const myInit = {
+          method: 'POST',
+          mode: 'no-cors',
+        };
+
+        const myRequest = new Request(url, myInit);
+
+        fetch(myRequest).then(function(response) {
+          return response;
+        })
+      }
+      // end roistat
+
+      document.forms['SendCallback'].action='https://formspree.io/f/xayadkeb';
+      document.forms['SendCallback'].target='frame_result';
+      document.forms['SendCallback'].submit();
+      setTimeout(() => {
+        document.forms['SendCallback'].action='https://lab.tb7.kz/pl/lite/block-public/process-html?id=1056294971';
+        document.forms['SendCallback'].target='frame_result';
+        document.forms['SendCallback'].submit();
+      }, 2000);
+      return true;
+    }
+  },
+  computed: {
+    // window.addEventListener('load', function(){
+//   let loc = document.getElementById("40280460a5108748ecf");
+//   loc.value = window.location.href;
+//   let ref = document.getElementById("40280460a5108748ecfref");
+//   ref.value = document.referrer;
+//
+//   let statUrl = "https://lab.tb7.kz/stat/counter?ref=" + encodeURIComponent(document.referrer)
+//       + "&loc=" + encodeURIComponent(document.location.href);
+//   document.getElementById('gccounterImgContainer').innerHTML
+//       = "<img width=1 height=1 style='display:none' id='gccounterImg' src='" + statUrl + "'/>";
+// });
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -74,9 +101,9 @@
   .simple-btn {
     display: inline-block;
     padding: 1.625rem 2.625rem 1.625rem 2.625rem;
-    border: 1px solid #A7F271;
+    border: 1px solid #58be00;
     border-radius: 10px;
-    background-color: #A7F271;
+    background-color: #58be00;
     color: #000000;
     font-weight: 600;
     font-size: 0.875rem;
@@ -90,29 +117,22 @@
     }
   }
   .simple-btn:hover {
-    background-color: #1265F5;
+    background-color: #4c66ff;
     border-color: #FFED69;
     color: #ffffff;
   }
 }
-
-
-
 .button {
   appearance: none;
   outline: none;
   border: none;
   background: none;
   cursor: pointer;
-
   display: inline-block;
-
   color: #FFF;
   font-size: 18px;
   font-weight: 700;
-
 }
-
 .modal-overlay {
   position: absolute;
   top: 0;
@@ -122,7 +142,6 @@
   z-index: 98;
   background-color: rgba(0, 0, 0, 0.3);
 }
-
 .modal {
   position: fixed;
   top: 50%;
@@ -141,7 +160,6 @@
     max-width: 100%;
     height: 450px;
   }
-
   .material-icons {
     display: inline-block;
     color: black;
@@ -150,9 +168,7 @@
     top: 5px;
     right: 7px;
   }
-
   h1 {
-    font-family: Raleway;
     margin: 0 auto;
     color: #333333;
     font-style: normal;
@@ -161,7 +177,6 @@
     line-height: 47px;
     margin-bottom: 15px;
     @media(max-width: 1140px) {
-      font-family: Raleway;
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
@@ -169,25 +184,20 @@
       color: #333333;
     }
   }
-
   p {
-    font-family: Raleway;
     color: #333333;
     font-weight: normal;
     font-size: 18px;
     line-height: 21px;
     margin: 15px 0;
     @media(max-width: 1140px) {
-      font-family: Raleway;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
       line-height: 16px;
     }
   }
-
   form {
-
     input {
       margin-top: 22px;
       width: 100%;
@@ -199,7 +209,6 @@
       border-radius: 10px;
       text-align: center;
     }
-
     .simple-btn {
       display: inline-block;
       padding: 1.625rem 2.625rem 1.625rem 2.625rem;
@@ -228,26 +237,20 @@
     }
   }
 }
-
-
-
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: opacity .5s;
-  }
-
-  .fade-enter,
-  .fade-leave-to {
-    opacity: 0;
-  }
-
-  .slide-enter-active,
-  .slide-leave-active {
-    transition: transform .5s;
-  }
-
-  .slide-enter,
-  .slide-leave-to {
-    transform: translateY(-50%) translateX(100vw);
-  }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.slide-enter-active,
+.slide-leave-active {
+  transition: transform .5s;
+}
+.slide-enter,
+.slide-leave-to {
+  transform: translateY(-50%) translateX(100vw);
+}
 </style>

@@ -4,20 +4,20 @@
       <div class="container">
         <div class="curator__block">
           <div class="block__img nasty">
-            <div class="icon__img"><img src="@/assets/curator.png" alt=""></div>
+            <div class="icon__img"><img src="@/assets/curator.svg" alt=""></div>
           </div>
           <div class="block__description">
             <h1>Куратор</h1>
             <p>
-              Анастасия Галкина – эксперт <br> в прохождении Предварительного <br> Квалификационного Отбора. <br><br>
-              За 3 года работы помогла пройти успешно <br> ПКО более 300-ам компаниям. <br><br>
+              Анастасия Галкина – эксперт <br> в прохождении предварительного <br> квалификационного отбора. <br><br>
+              За 3 года работы помогла пройти успешно <br> ПКО более 300 компаниям. <br><br>
               5.95% ее клиентов обращаются <br> по Рекомендации.
             </p>
           </div>
         </div>
         <div class="curator__block">
           <div class="block__img chingis">
-            <div class="icon__img"><img src="@/assets/curator.png" alt=""></div>
+            <div class="icon__img"><img src="@/assets/curator.svg" alt=""></div>
           </div>
           <div class="block__description">
             <h1>Лектор</h1>
@@ -33,13 +33,13 @@
         </div>
         <div class="curator__block">
           <div class="block__img aika">
-            <div class="icon__img"><img src="@/assets/curator.png" alt=""></div>
+            <div class="icon__img"><img src="@/assets/curator.svg" alt=""></div>
           </div>
           <div class="block__description">
             <h1>Куратор</h1>
             <p>
-              Айгерім Күлдібаева – одна из лучших <br> учеников, прошедших курс «5 элемент». <br><br>
-              В случае форс мажорных ситуаций, <br> содействует в разрешении проблем <br> в позитивную сторону. <br><br>
+              Айгерім Күлдібаева – одна из лучших <br> учениц, прошедших курс "Пятый элемент". <br><br>
+              В случае форс-мажорных ситуаций, <br> содействует в разрешении проблем. <br><br>
               Отличный мотиватор. Помогает <br> казахоязычным ученикам в обучении.
             </p>
           </div>
@@ -66,7 +66,6 @@
   .curator {
     .curator__wrapper {
       display: flex;
-      padding: 12px 0;
       max-width: 1140px;
       margin: 0 auto;
       @media(max-width: 840px) {
@@ -115,42 +114,41 @@
 
           .nasty {
             background: url("../assets/nasty.png") no-repeat;
-            background-position: 30% 50%;
-            background-color: #262626;
+            background-position: 30% 101%;
+            background-color: #20163a;
             @media(max-width: 1140px) {
-              background-size: 500px;
+              //background-size: 500px;
             }
           }
           .nasty:hover {
-            background-color: #FFED69;
+            background-color: #58be00;
           }
 
           .chingis {
             background: url("../assets/chingis.png") no-repeat;
             background-position: 55% 50%;
-            background-color: #262626;
+            background-color: #20163a;
             @media(max-width: 1140px) {
-              background-size: 500px;
+              //background-size: 500px;
             }
           }
           .chingis:hover {
-            background-color: #FFED69;
+            background-color: #58be00;
           }
 
           .aika {
             background: url("../assets/aigerim.png") center no-repeat;
-            background-color: #262626;
+            background-color: #20163a;
             @media(max-width: 1140px) {
-              background-size: 300px;
+              //background-size: 300px;
             }
           }
           .aika:hover {
-            background-color: #FFED69;
+            background-color: #58be00;
           }
 
           .block__description {
             padding-top: 19px;
-            font-family: Raleway;
             font-style: normal;
             font-weight: bold;
             line-height: 20px;
@@ -161,7 +159,6 @@
             }
 
             h1 {
-              font-family: Raleway;
               font-style: normal;
               font-weight: bold;
               font-size: 16px;
@@ -172,7 +169,6 @@
 
             p {
               padding-top: 19px;
-              font-family: Raleway;
               font-style: normal;
               font-size: 16px;
             }

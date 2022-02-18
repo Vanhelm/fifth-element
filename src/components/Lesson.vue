@@ -34,12 +34,10 @@ export default {
 <style lang="scss" scoped>
   .free {
     display: flex;
-    padding: 12px 0;
     max-width: 1140px;
     margin: 0 auto;
     @media(max-width: 1200px) {
       justify-content: center;
-      padding: 12px 0;
     }
 
     .wrapper {
@@ -57,7 +55,6 @@ export default {
       .wrapper__text {
         @media(max-width: 1140px) {
           width: 100%;
-          font-family: Raleway;
           font-style: normal;
           font-weight: bold;
           font-size: 20px;
@@ -67,7 +64,6 @@ export default {
         }
 
         h1 {
-          font-family: Raleway;
           font-style: normal;
           font-weight: bold;
           font-size: 40px;
@@ -75,7 +71,6 @@ export default {
           color: #000000;
           @media(max-width: 1140px) {
             width: 100%;
-            font-family: Raleway;
             font-style: normal;
             font-weight: bold;
             font-size: 20px;
@@ -89,7 +84,6 @@ export default {
           height: 59px;
           left: 6px;
           top: 183px;
-          font-family: Raleway;
           font-style: normal;
           font-weight: normal;
           font-size: 18px;
@@ -99,7 +93,6 @@ export default {
           @media(max-width: 1140px) {
             width: 100%;
             margin-top: 10px;
-            margin-bottom: 40px;
           }
         }
       }

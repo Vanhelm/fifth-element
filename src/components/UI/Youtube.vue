@@ -23,9 +23,9 @@ export default {
     flex-direction: row;
     align-items: center;
     padding: 18px 25px;
-    border: 1px solid #A7F271;
+    border: 1px solid #58be00;
     border-radius: 10px;
-    background-color: #A7F271;
+    background-color: #58be00;
     color: #000000;
     font-style: normal;
     font-weight: bold;
