@@ -51,8 +51,8 @@ export default {
       var name = document.forms['SendCallback'].elements['name'].value;
       var email = document.forms['SendCallback'].elements['email'].value;
       if(phone && name && email){
-        const url = 'https://cloud.roistat.com/api/proxy/1.0/leads/add?key=NmEwMWZkNDZiZGFlOWY0Y2ZhYzQ4ZWQyMGMzZmQ3ODA6MjAxODkw&is_skip_sending=1&name='
-            + name +'&phone=' + phone + '&email=' + email;
+        const url = 'https://cloud.roistat.com/api/proxy/1.0/leads/add?title=Лид с сайта tb5element&key=NmEwMWZkNDZiZGFlOWY0Y2ZhYzQ4ZWQyMGMzZmQ3ODA6MjAxODkw&is_skip_sending=0&name='
+            + name +'&phone=' + phone + '&email=' + email + '&fields[UF_CRM_1635829933685]=98'
         const myInit = {
           method: 'POST',
           mode: 'no-cors',
